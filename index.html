@@ -17,21 +17,19 @@
     <div id="topbar">
         <img src="https://i.imgur.com/uGtcKRA.png" alt="banner" id="banner">
     </div>
-    <div class="spacer"></div>
-    <div id="gameContent" >
+    <div id="gameContent">
         <h1>Press any key to get started!</h1>
         <h2>Wins</h2>
         <div id="hangman" onload="startUp()">
             <input type="text" id="letter">
-            <input type="button" value="letter" onclick="letter()">
+            <!-- <input type="button" value="letter">  -->
             <p id="answer"></p>
-            <p id="content"></p>
+            <p id="counter"></p>
             <p id="stat"></p>
+            <p id="guesses">letters guessed: </p>
 
-        <!-- </div> -->
-
-
-    <!-- </div> -->
+        </div>
+    </div>
     <script src="assets/javascript/game.js"></script>
 </body>
 

@@ -32,16 +32,18 @@ function startup(){
     //put words in a string
     s = answerArray.join(" ");
     document.getElementById("answer").innerHTML = s;
+    console.log(s);
 
 }
 
-function letter ()
-{
+// function letter ()
+// {
+    document.addEventListener('keyup', function (event){
     // letter user typed in field
-    var letter = document.getElementById("letter").value;
+    var letter = event.key;
 
     // make sure theres a guess
-if (letter.length > 0)
+    if (letter.length > 0)
 {
     
     for (var i = 0; i < randomWord.length; i++){
@@ -52,18 +54,27 @@ if (letter.length > 0)
             //assign it to letter
         answerArray[i] = letter;
         }
+
+
     }
     //how many guesses it takes
     count++;
-    // document.getElementById("counter").innerHTML = "number of clicks:" + count;
+    document.getElementById("counter").innerHTML = "number of clicks:" + count;
     document.getElementById("answer").innerHTML = answerArray.join(" "); 
+    document.getElementById("letter").value = "";
+
+    // will add wrong guesses to field
+    document.getElementById("guesses").append(letter + ",")
+    
 }
+
     // ramdon
     if(count > 5){
         document.getElementById("stat").innerHTML = "are we done yet?";
     }
 
-}
+});
 
+startup()
 
 
