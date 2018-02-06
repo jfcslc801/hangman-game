@@ -19,6 +19,7 @@ var randomWord = randomWordarr[Math.floor(Math.random() * randomWordarr.length)]
 var s;
 var count = 0;
 
+
 //empty array to store guesses
 var answerArray = [];
 
@@ -45,21 +46,28 @@ function startup(){
     // make sure theres a guess
     if (letter.length > 0)
 {
-    
+    var correctGuess = false;
+
     for (var i = 0; i < randomWord.length; i++){
 
         //now if the user selects a letter from randomWord
         if (randomWord[i] === letter){
-        
+        correctGuess = true;
             //assign it to letter
         answerArray[i] = letter;
         }
 
 
     }
+
+
+    if (correctGuess === false){
+        count++;
+
+    }
     //how many guesses it takes
-    count++;
-    document.getElementById("counter").innerHTML = "number of clicks:" + count;
+    
+    document.getElementById("counter").innerHTML = "Wrong Guesses: " + count;
     document.getElementById("answer").innerHTML = answerArray.join(" "); 
     document.getElementById("letter").value = "";
 
@@ -69,9 +77,12 @@ function startup(){
 }
 
     // ramdon
-    if(count > 5){
-        document.getElementById("stat").innerHTML = "are we done yet?";
+    if(count >= 9){
+        document.getElementById("stat").innerHTML = "You lose!";
+        return;
     }
+
+
 
 });
 

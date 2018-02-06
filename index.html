@@ -19,15 +19,17 @@
     </div>
     <div id="gameContent">
         <h1>Press any key to get started!</h1>
-        <h2>Wins</h2>
-        <div id="hangman" onload="startUp()">
-            <input type="text" id="letter">
-            <!-- <input type="button" value="letter">  -->
+        <div id="hangman">
+            <p>Current Word</p>
+            <!-- displays letters guessed in html -->
+            <p id="letter"></p>
+            <!-- replaces _ with correct guessed letter in html -->
             <p id="answer"></p>
             <p id="counter"></p>
-            <p id="stat"></p>
-            <p id="guesses">letters guessed: </p>
-
+            <!-- displays every letter pressed -->
+            <p id="guesses">Letters Already Guessed: </p>
+            <!-- displays you lose after 10 attempts -->
+            <p id="stat"></p> 
         </div>
     </div>
     <script src="assets/javascript/game.js"></script>
