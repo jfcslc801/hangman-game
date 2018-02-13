@@ -5,34 +5,53 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Hangman Game</title>
-    <link href="assets/css/style.css" rel="stylesheet" type="text/css" />
+    <!-- Latest compiled and minified CSS -->
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u"
         crossorigin="anonymous">
-    <!-- <script src="jquery.js"></script> -->
+    <link rel="stylesheet" href="assets/css/style.css">
 
+    <title>Document</title>
 </head>
 
 <body>
-    <div id="topbar">
-        <img src="https://i.imgur.com/uGtcKRA.png" alt="banner" id="banner">
-    </div>
-    <div id="gameContent">
-        <h1>Press any key to get started!</h1>
-        <div id="hangman">
-            <p>Current Word</p>
-            <!-- displays letters guessed in html -->
-            <p id="letter"></p>
-            <!-- replaces _ with correct guessed letter in html -->
-            <p id="answer"></p>
-            <p id="counter"></p>
-            <!-- displays every letter pressed -->
-            <p id="guesses">Letters Already Guessed: </p>
-            <!-- displays you lose after 10 attempts -->
-            <p id="stat"></p> 
+    <div class="container">
+        <div class="jumbotron">
+            <h1 class="display-3">Hang Man!</h1>
+            <div class="panel panel-default">
+                <div class="panel-heading">
+                    <h3 class="panel-title">word To Guess</h3>
+                    <h2 id="wordToGuess">_ _ _ _ _ _ _ _ </h2>
+                </div>
+                <div class="panel-body">
+                    <h3>wrong Guesses:
+                        <span id="wrongGuesses"></span>
+                    </h3>
+                    <h3>
+                        Guesses Left:
+                        <span id="numGuesses">0</span>
+                    </h3>
+                    <h3>
+                        Win Counter:
+                        <span id="winCounter">0</span>
+                    </h3>
+                    <h3>
+                        Loss Counter:
+                        <span id="lossCounter">0</span>
+                    </h3>
+                    <h1>
+                        <span id="youWin"></span>
+                    </h1>
+                    <h1>
+                        <span id="youLose"></span>
+                    </h1>
+                </div>
+            </div>
         </div>
+
+
     </div>
     <script src="assets/javascript/game.js"></script>
+
 </body>
 
 </html>
