@@ -2,6 +2,10 @@ li {
     list-style-type: none;
 }
 
-h1{
+#youLose{
     color: red;
+}
+
+#youWin{
+    color: green;
 }
